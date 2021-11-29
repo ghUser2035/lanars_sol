@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0 1rem;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+@for $i from 1 through 40 {
+  $pixels: $i * 8;
+  $rems: $i * 0.5;
+  .pt-#{$pixels} {
+    padding-top: $rems + rem;
+  }
+  .mb-#{$pixels} {
+    margin-bottom: $rems + rem;
+  }
+  .mr-#{$pixels} {
+    margin-right: $rems + rem;
+  }
+}
